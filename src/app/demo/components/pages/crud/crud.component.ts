@@ -3,7 +3,6 @@ import { Pet } from '../../../../demo/api/pet.model';
 import { MessageService } from 'primeng/api';
 import { Table } from 'primeng/table';
 import { PetService } from 'src/app/demo/service/pet.service';
-import { CalendarModule } from 'primeng/calendar';
 
 @Component({
     templateUrl: './crud.component.html',
