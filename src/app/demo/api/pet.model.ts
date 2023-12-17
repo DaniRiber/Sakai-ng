@@ -1,7 +1,3 @@
-interface InventoryStatus {
-    label: string;
-    value: string;
-}
 export interface Pet {
     id?: string;
     key?: string
@@ -11,5 +7,5 @@ export interface Pet {
     idade?: number;
     data?: Date;
     peso?: number;
-    sexo?: InventoryStatus;
+    sexo?: string;
 }

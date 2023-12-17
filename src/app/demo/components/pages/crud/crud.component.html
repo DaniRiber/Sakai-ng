@@ -66,7 +66,7 @@
                         </td>
                         <td style="width:14%; min-width:10rem;">
                             <span class="p-column-title">Sexo</span>
-                            {{pet.inventoryStatus}}
+                            {{pet.sexo}}
                         </td>
                         <td>
                             <div class="flex">
@@ -96,14 +96,14 @@
                     <p-inputNumber id="idade" [useGrouping]="false" [min]="0" [max]="999" [(ngModel)]="pet.idade"></p-inputNumber>
                 </div>
                 <div class="field">
-                    <label for="data">Idade</label>
+                    <label for="data">Data de nascimento</label>
                     <input type="date" pInputText id="data" [(ngModel)]="pet.data"/>
                 </div>
                 <div class="field">
                     <label for="status">Sexo</label>
-                    <p-dropdown [(ngModel)]="pet.inventoryStatus" inputId="inventoryStatus" optionValue="label" [options]="statuses" placeholder="Select">
+                    <p-dropdown [(ngModel)]="pet.sexo" inputId="sexo" optionValue="label" [options]="statuses" placeholder="Select">
                         <ng-template pTemplate="selectedItem">
-                            <span *ngIf="pet && pet.inventoryStatus" [class]="'product-badge status-' + pet.inventoryStatus.toString().toLowerCase()">{{pet.inventoryStatus}}</span>
+                            <span *ngIf="pet && pet.sexo" [class]="'product-badge status-' + pet.sexo.toString().toLowerCase()">{{pet.sexo}}</span>
                         </ng-template>
                         <ng-template let-option pTemplate="item">
                             <span [class]="'product-badge status-' + option.value">{{option.label}}</span>

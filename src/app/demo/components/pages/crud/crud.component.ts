@@ -94,14 +94,14 @@ export class CrudComponent implements OnInit {
         if (this.pet.name?.trim()) {
             if (this.pet.id) {
                 // @ts-ignore
-                this.pet.inventoryStatus = this.pet.inventoryStatus.value ? this.pet.inventoryStatus.value : this.pet.inventoryStatus;
+                this.pet.sexo = this.pet.sexo.value ? this.pet.sexo.value : this.pet.sexo;
                 this.petService.updatePet(this.pet.key, this.pet)
                 this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Pet Updated', life: 3000 });
             } else {
                 this.pet.id = this.createId();
                 this.petService.createPet(this.pet);
                 // @ts-ignore
-                this.pet.inventoryStatus = this.pet.inventoryStatus ? this.pet.inventoryStatus.value : 'INSTOCK';
+                this.pet.sexo = this.pet.sexo ? this.pet.sexo.value : 'INSTOCK';
                 this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Pet Created', life: 3000 });
             }
 
